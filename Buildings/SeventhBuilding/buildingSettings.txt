@@ -1,0 +1,9 @@
+objWidth=1
+objHeight=1
+HSpeed = 1
+VSpeed= 1
+UpModel=buildingPicture.png
+DownModel=buildingPicture.png
+LeftModel=buildingPicture.png
+RightModel=buildingPicture.png
+isSolid=true

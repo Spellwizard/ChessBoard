@@ -1,0 +1,9 @@
+objWidth=5
+objHeight=5
+HSpeed = 1
+VSpeed= 1
+UpModel=IronMan.jpg
+DownModel=IronMan.jpg
+LeftModel=IronMan.jpg
+RightModel=IronMan.jpg
+isSolid=true

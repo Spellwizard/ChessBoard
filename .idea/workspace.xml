@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="PlaneShootergGame:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/PlaneShootergGame_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2D_FactorioRipOff.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2D_FactorioRipOff.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackgroundImages/Background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackgroundImages/Background_Endor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bomb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Assembler/Robot_Left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Assembler/Robot_Right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Assembler/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Assembler/buildingPictureDown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Assembler/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Conveyor/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Conveyor/buildingPictureDown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Conveyor/buildingPictureLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Conveyor/buildingPictureRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Conveyor/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/EightBuilding/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/EightBuilding/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/ElectricPole/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/ElectricPole/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/MinerBuilding/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/MinerBuilding/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/NinthBuilding/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/NinthBuilding/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Pipe/Pipe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Pipe/PipeDown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Pipe/PipeLeft.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Pipe/PipeRight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/Pipe/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/SeventhBuilding/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/SeventhBuilding/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/SteamGenerator/IronMan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/SteamGenerator/buildingPicture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Buildings/SteamGenerator/buildingSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodePDF.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/allclasses-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/allpackages-index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/element-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-3.3.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-migrate-3.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jszip-utils/dist/jszip-utils-ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jszip-utils/dist/jszip-utils-ie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jszip-utils/dist/jszip-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jszip-utils/dist/jszip-utils.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jszip/dist/jszip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/jquery/jszip/dist/jszip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/member-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/member-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/package-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/package-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/resources/glass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/resources/x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/AboutWindow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Assembler.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/BackgroundImage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/BeltItem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/BeltSlot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Building.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/CoalOre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Controller.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Conveyor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/CopperOre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/DroppedItem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/EightBuilding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/ElectricPole.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/FileReader.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Food.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Frog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/IronOre.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/MinerBuilding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/MovingObject.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/NinthBuilding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/OptionsMenu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Ore.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/OverridingValuesClass.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Pipe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Plane.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Player.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/Projectile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/SeventhBuilding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/SolidObject.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/SteamGenerator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/devTools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/sample/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/serialized-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/type-search-index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevDocumentation/type-search-index.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Explosion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MenuBackground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MenuBackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlaneShooterGame.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlaneShooterGame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlaneShooterGame_Tue_Aug_06_19-32-43_CDT_2019.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlaneShooterGame_Tue_Aug_06_19-32-43_CDT_2019.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PlaneShootergGame.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Players Model/Player_0/Robot_Left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Players Model/Player_0/Robot_Right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Players Model/Player_0/defaultPlayerModel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Players Model/Player_0/playersettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainmenu/button_start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module_planeshooterggame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module_planeshooterggame_Tue_Aug_06_19-32-43_CDT_2019.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module_planeshooterggame_Wed_Sep_18_17-37-34_CDT_2019.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/coal/OreSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/coal/ore_picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/copper/OreSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/copper/ore_picture.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/iron/OreSettings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ore/iron/ore_picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/AboutWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Assembler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/BackgroundImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/BackupOptionsText.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/BeltSlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Building.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/CoalOre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Conveyor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/CopperOre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/DroppedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/EightBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/ElectricPole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/FileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Frog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/IronOre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/MinerBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/MovingObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/NinthBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/OptionsMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Ore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/OverridingValuesClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Pipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Plane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Projectile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/SeventhBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/SolidObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/SteamGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/devTools.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectId" id="1PmgTYhc8Fdm0fAnUTi9EpXeVHr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="2D_FactorioRipOff" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager" selected="Application.Menu">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Controller" />
+      <module name="PlaneShootergGame" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <module name="PlaneShootergGame" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.Menu" />
+      <module name="PlaneShootergGame" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Controller" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Menu" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Menu" />
+        <item itemvalue="Application.Controller" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1302000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="844" y="381" key="#Notifications" timestamp="1590686730363">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="844" y="381" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1590686730363" />
+    <state x="713" y="388" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1590685504696">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="388" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590685504696" />
+    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1590687790122">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590687790122" />
+    <state x="816" y="416" key="Github.ShareDialog" timestamp="1590686657863">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="816" y="416" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590686657863" />
+    <state x="716" y="216" key="Github.UntrackedFilesDialog" timestamp="1590686671529">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="716" y="216" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590686671529" />
+    <state width="669" height="901" key="GridCell.Tab.0.bottom" timestamp="1591369823075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="669" height="901" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591369823075" />
+    <state width="669" height="901" key="GridCell.Tab.0.center" timestamp="1591369823075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="669" height="901" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591369823075" />
+    <state width="669" height="901" key="GridCell.Tab.0.left" timestamp="1591369823075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="669" height="901" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591369823075" />
+    <state width="669" height="901" key="GridCell.Tab.0.right" timestamp="1591369823075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="669" height="901" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591369823075" />
+    <state x="439" y="93" key="SettingsEditor" timestamp="1590685583868">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="439" y="93" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590685583868" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
+          <line>51</line>
+          <properties field="trainW" class="sample.TrainCanvas" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sample/Main.java</url>
+          <line>822</line>
+          <properties class="sample.GameCanvas" method="calcNewRound">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/Map.java</url>
+          <line>291</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/Main.java</url>
+          <line>954</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+</project>
