@@ -1,27 +1,35 @@
 package sample;
-import java.awt.*;
-import java.awt.event.*;
-import javax.imageio.ImageIO;
-import javax.swing.*;
-//This is used to track keyboard inputs
-import java.awt.event.KeyListener;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import javax.swing.*;
+
+//This is the class doing the heavy lifting so i can have a window
+import java.awt.*;
+
+    //This program is used to listen for mouse / key clicks and respond
+    import java.awt.event.*;
+
+    //This is mostly used once to show the Menu's Background Image but it helps for polish
+    import java.awt.image.BufferedImage;
+
 
 public class Menu{
+
     //make the class and start the initial sheet construction needed
 
     public static MenuSub frame = new MenuSub("Game Menu");
-   public static void makeVisible(){
-    //   frame.setVisible(true);
+
+    /**
+     * Program used to help with the transition in weird flip back when closing out another window,
+     * Mostly a failed experiement a couple times and left for sentimental value
+     */
+   protected static void makeVisible(){
+
        frame.betterVisible();
    }
 
     public static void main(String[]args){
+
+        //Set the Menu Window's Name that appears on the top of the screen
         frame.setTitle("Program Main Menu");
 
         //make sure the window will stop program on closing window
@@ -29,150 +37,130 @@ public class Menu{
 
         //make the window visible
         frame.setVisible(true);
+
         }
+
     }
 
+/**
+ *
+ */
+class MenuSub
+        extends JFrame
+        implements ActionListener
+                {
 
-class MenuSub extends JFrame implements ActionListener {
-
+    //The Window Object for the Options Menu
     OptionsMenu options_Menu = null;
 
+    //The Window Object for the Options Menu
     AboutWindow About_Menu = null;
 
-    String BackgroundPath = "MenuBackground.png";
-
-    private BufferedImage BackgroundImage;
-
+    //JFrame program for the important program
     JFrame GameJFrame = null;
 
+
     private Button SGame = new Button("Start Program");
+
+    String BackgroundPath = "MenuBackground.jpg";
+
+    private BufferedImage BackgroundImage;
 
 
     //make a new container to have the subitems
     Container MenuButtonsContainer = new Container();
 
+    public void makeVisible()
+        {this.setVisible(true);}
 
-    public void makeVisible(){this.setVisible(true);}
-
-    KeyListener InputTracker = new KeyListener() {
-
-
-        @Override
-        public void keyPressed(KeyEvent e) {
-            // for quick testing and use of find each key code on the fly
-            //System.out.println(e.getKeyCode()+" ");
-
-            //Frog movements for W,A,S,D
-            // and make sure that such a move won't move the player off the map
-
-            //Check if key 'W' is pressed to move character up
-
-            //System.out.println("KeyPressed: "+e.getKeyCode());
-        }
-        //these two are needed but will be unused
-        @Override
-        public void keyTyped(KeyEvent e){}
-        @Override
-        public void keyReleased(KeyEvent e) {}
-
-    };
-
-    private BufferedImage imageGetter(String filePathName){
-        try {
-
-            return ImageIO.read(new File(filePathName));
-        } catch (IOException e) {
-
-
-            e.printStackTrace();
-        }
-        return null;
-    }
 
     public MenuSub(String windowName){
-        BackgroundImage=imageGetter(BackgroundPath);
+        //This is def important
+        BackgroundImage=FileReader.imageGetter(BackgroundPath);
 
-
-        System.out.println("New Sheet made: "+windowName);
-
+        //Gotta set the window Name
         this.setName(windowName);
 
+        //Def gotta init, super important (?)
         this.init();
-
 
     }
     public void betterVisible(){
         this.makeVisible();
     }
 
-    //used on making a new sheet class object
+    /**
+     * used on making a new sheet class object
+     */
     private void init(){
-        this.setBackground(Color.BLACK);
-        this.setSize(1000,800);
 
-        //Add a focus on the window to track for keyboard inputs
-        this.addKeyListener(InputTracker);
+        //Set the Menu Window's Background Colour
+        this.setBackground(Color.BLACK);
+
+        //Set the Menu's Width / Length
+        this.setSize(800,800);
+
+        //funciton used to add the various buttons, listeners, ect
         MainMenu();
-        System.out.println("\nThis only runs once\n");
+
+        //Redraw the elements on the screen to ensure the added elements show up
         repaint();
 
     }
 
     @Override
     public void paint(Graphics g){
+
+        //i don't remember but StackOverflow said this would solve an issue that i can't remember..
         super.paintComponents(g);
+
         super.paint(g);
+
+        //We do want to ensure the background Menu Image is still their.
         if(BackgroundImage!=null) {
             g.drawImage(BackgroundImage, 0, 0, null);
         }
 
     }
 
-    //called when the mainmenu needs to be drawn
-    //it should clear the window and set the mainmenu up with its buttons and items
-
+    /**
+     * Actually add the various components needed but mostly buttons
+     * it should clear the window and set the mainmenu up with its buttons and the varoius addons like listeners
+    */
     private void MainMenu(){
 
         //the result should be the remaining space that won't be taken up by the buttons and thus can be divided by the number of buttons
         //and used as the y offset
         int ButtonYOffset = 40;
 
-        initMenuImages();
-
-        //MenuButtonsContainer.add(new ImageIO(BackgroundImage));
-
-        System.out.println("MainMenu Function running");
 
         //This is used for some 'fancy' math but must be updated if additional buttons are added/ removed
         int MainMenuButtonCount = 4;
 
         //The Button's width in pixels
         int ButtonWidth = 250;
+
         //the buttons height in pixels
         int ButtonHeight = 60;
+
         //The starting Y position of the Buttons
-        int ButtonYPos = (getHeight()-(
-                ButtonHeight+ButtonHeight)
-                 ) -
-                (MainMenuButtonCount *
-                        (ButtonHeight + ButtonYOffset));
+        int ButtonYPos = (
+                getHeight() -   (   ButtonHeight    +   ButtonHeight)   )
+                                    -
+                (MainMenuButtonCount * (ButtonHeight + ButtonYOffset))
+                ;
 
         //The X coordinate for all the button positions below
         int ButtonXPos = (570)
         -ButtonWidth;
 
-        //The gap between Buttons by calculating the available space compared to the number of buttons
-
-        //the usable range is from the ButtonYPos to the height of the window, then subtract that number from
-        int totalUsableYSpace = ButtonYPos-getHeight();
-        //the height of the buttons by the number of total buttons
-        int totalYButtonnsUsed = ButtonHeight - MainMenuButtonCount;
-
-
         //Button Font
         Font bFont = new Font("TimesRoman", Font.PLAIN, 25);
 
-        //Primary buttons
+        //Menu buttons
+
+        //Create each Button along with setting certain values -
+        //visibility, background Color, the actionlistener and the font
 
         //Start Game button 'Play'
         //set a code to check when any buttons are clicked
@@ -195,6 +183,8 @@ class MenuSub extends JFrame implements ActionListener {
         BOptions.addActionListener(this);
         BOptions.setFont(bFont);
 
+
+
         //Program About
         Button BAbout = new Button("About Programs");
 
@@ -206,7 +196,8 @@ class MenuSub extends JFrame implements ActionListener {
         BAbout.setFont(bFont);
 
 
-        //quit button the close the window
+
+        //Program Quit
         //make the quit button
         Button BQuit = new Button("Quit Program");
         //set a code to check when any buttons are clicked
@@ -218,25 +209,41 @@ class MenuSub extends JFrame implements ActionListener {
         BQuit.setFont(bFont);
 
 
-        //Set the bounds for the buttons
-        //Start Game
-        SGame.setBounds(ButtonXPos,ButtonYPos,
-                ButtonWidth, ButtonHeight);
-        ButtonYPos=(ButtonYPos+ButtonYOffset+ButtonHeight);
-        //Program options
-        BOptions.setBounds(ButtonXPos, ButtonYPos,
-                ButtonWidth, ButtonHeight);
-        ButtonYPos=(ButtonYPos+ButtonYOffset+ButtonHeight);
+        //Set the Button's Width + Height along with the X axis
+        //Then through each Button increment along with the ButtonYOffset + ButtonHeight
+            //to ensure aligned positioning and reasonably spaced
 
-        BAbout.setBounds(ButtonXPos, ButtonYPos,
+        //Start Game
+        SGame.setBounds(
+                ButtonXPos,ButtonYPos,
                 ButtonWidth, ButtonHeight);
-        ButtonYPos=(ButtonYPos+ButtonYOffset+ButtonHeight);
+
+            //Increment the Button Position Y to the next button position
+            ButtonYPos=(ButtonYPos+ButtonYOffset+ButtonHeight);
+
+
+        //Program options
+        BOptions.setBounds(
+                ButtonXPos, ButtonYPos,
+                ButtonWidth, ButtonHeight);
+
+            //Increment the Button Position Y to the next button position
+            ButtonYPos=(ButtonYPos+ButtonYOffset+ButtonHeight);
+
+
+        BAbout.setBounds(
+                ButtonXPos, ButtonYPos,
+                ButtonWidth, ButtonHeight);
+
+            //Increment the Button Position Y to the next button position
+            ButtonYPos=(ButtonYPos+ButtonYOffset+ButtonHeight);
+
+
         //Exit Program
         BQuit.setBounds(ButtonXPos, ButtonYPos,
                 ButtonWidth, ButtonHeight);
-        ButtonYPos=(ButtonYPos+ButtonYOffset+ButtonHeight);
 
-        System.out.println("Window Height: "+this.getHeight()+" Final Button Y Pos: "+ButtonYPos);
+
 
         //add all the buttons to the Container
         MenuButtonsContainer.add(SGame);
@@ -247,10 +254,12 @@ class MenuSub extends JFrame implements ActionListener {
         //Make sure the container will be visible
         MenuButtonsContainer.setVisible(true);
 
+        //Set a background for the container
         MenuButtonsContainer.setForeground(Color.black);
 
-        this.add(MenuButtonsContainer);
 
+        //And Actually add the container to the Menu Window for display
+        this.add(MenuButtonsContainer);
 
     }
 
@@ -258,100 +267,131 @@ class MenuSub extends JFrame implements ActionListener {
     //this can be used to check if a button, check box or the like is used
     public void actionPerformed(ActionEvent ae){
 
+        //Get the string related to the action performed
         String action = ae.getActionCommand();
 
-        //check to see what button was pressed and execute relevant actions
+        //QUIT
         if(action.equals("BQuit")){
+
+            //QUIT PROGRAM
             System.exit(0);
+
         }
-        //start the game
+
+        //START
         else if(action.equals("SGame")){
-            GameJFrame = null;
+
+            //Set the GameJFrame to a new ProgramWindow
+            //Based on present design at this hand off the Java File 'Main' takes primary control until program is ended
             GameJFrame = makeNewGameWindow();
+
             this.setVisible(false); // hides the menu window
 
         }
-        //open the option window
+
+        //OPTIONS
         else if(action.equals("option")){
-            System.out.println("Starting options");
 
-
+            //instantiate a new options menu program
             options_Menu = new OptionsMenu("Options Window");
 
-            //On Close of game window go back to the menu window
+            //Setup Closure to flip back to the MainMenu
             options_Menu.addWindowListener(new WindowAdapter() {
+
                 @Override
                 public void windowClosing(WindowEvent e) {
-                    System.out.println("Closing Window");
 
-
-
+                    //Make the Menu Visible again
                     Menu.makeVisible();
+
+                    //And close out the options menu entirely
+                    //This is important as options Menu deals a lot with files and we don't want things left messy
                     options_Menu= null;
 
                 }
             });
 
-                //make the window visible
-            options_Menu.setVisible(true);
+                //make the Options Window visible
+                options_Menu.setVisible(true);
 
-        this.setVisible(false);
+                //Hide the Menu, for now :)
+                this.setVisible(false);
         }
 
+        //ABOUT
         else if(action.equals("BAbout")){
-            System.out.println("Starting About Window");
 
+            //instantiate an about menu
             About_Menu = new AboutWindow("About Window");
 
             //On Close of game window go back to the menu window
             About_Menu.addWindowListener(new WindowAdapter() {
                 @Override
                 public void windowClosing(WindowEvent e) {
-                    System.out.println("Closing Window");
 
-
-
+                    //Make the Menu Visible again
                     Menu.makeVisible();
-                    About_Menu= null;
+
+                    //And close out the options menu entirely
+                    //This is important as options Menu deals a lot with files and we don't want things left messy
+                    options_Menu= null;
+
                 }
             });
 
             //make the window visible
             About_Menu.setVisible(true);
 
+            //Hide the Menu, for now :)
             this.setVisible(false);
         }
 
-        }
+        }//END OF ACTION PERFORMED
 
+    /**
+     * Setup the Game Window and return it as a JFrame construct
+     * @return the game window
+     */
         public JFrame makeNewGameWindow(){
-                JFrame frame = new JFrame("Frog Version: July 31, 2019");
+
+                //Always gotta start with a new program
+                JFrame frame = new JFrame();
+
+                //Get your basic container
                 Container c = frame.getContentPane();
+
+                //Set background colors b/c i'm an interior decorator(?)
                 c.setBackground(Color.lightGray);
-                frame.setSize(900,700);
+
+                //Make sure to set a basic window size to ensure it's obvious a window was opened
+                frame.setSize(900,900);
+
+                //wtf does this do?
                 frame.setLocationRelativeTo(null);
+
+                //gotta add this container, for reasons? i'm not sure this container is used
                 frame.add(new GameCanvas());
+
+                //I keep making everything visible like i want my windows naked? confused
                 frame.setVisible(true);
 
                 //On Close of game window go back to the menu window
                 frame.addWindowListener(new WindowAdapter() {
+
                     @Override
                     public void windowClosing(WindowEvent e) {
-                        System.out.println("Closing Window");
-                        //frame.removeAll();
+
+                        //Gotta trade back to the Menu
                         Menu.makeVisible();
-                        //System.exit(0);
+
                     }
+
                 });
 
+                //Finally return the frame for fiendish purposes only
+                return frame;
+                }
 
-        return frame;
-        }
-
-
-        public void initMenuImages(){
-
-        }
 
     }
 

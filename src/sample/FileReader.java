@@ -1,8 +1,8 @@
 package sample;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.PrintWriter;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -424,6 +424,32 @@ public class FileReader {
 
     public void setFileFolder(String fileFolder) {
         this.fileFolder = fileFolder;
+    }
+
+
+
+
+    /**
+     * Pretty sure this is one of the few times StackOverFlow was my friend
+     * Prettu much given a files specific file name return the image retrived either jpg or png
+     *
+     * Will return null if unable to find
+     *
+     * Important to note the search starts in the programs directory, so the top level of the program files
+     * if you want a specific subfile you have to specify eg: Frogs//image.png
+     * @param filePathName the file position from starting in the directory of the files name
+     * @return the image found or null if not found
+     */
+    protected static BufferedImage imageGetter(String filePathName){
+        try {
+
+            return ImageIO.read(new File(filePathName));
+        } catch (IOException e) {
+
+
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

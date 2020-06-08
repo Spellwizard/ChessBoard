@@ -289,48 +289,6 @@ public class Map {
 
     }
 
-    //Given an ore type, amount of ore locations, min size of ore location, max size of ore location
-    public ArrayList<Ore> populateOre(Ore a, int x, int y, int width, int height){
-        ArrayList<Ore> output = new ArrayList<>();
-
-        //hand on the scale for now, will update the populatation with real randomiztion of the ore setup
-        x*= tileWidth;
-        y *=tileHeight;
-
-        int counter = 0;
-
-        for(int i =0; i<width;i++){
-
-            for(int j=0;j<height;j++){
-
-                output.add(new Ore(
-
-                        1*tileWidth,1*tileHeight,
-                        x+(i*tileWidth)
-                        ,
-                        y+(j*tileHeight)
-                        ,Color.red,
-
-                                a.getUp_Image(), a.getL_Image(),a.getUp_Image(),a.getUp_Image()
-
-                ));
-
-                OverridingValuesClass.OverrideSolidObject(output.get(counter),a);
-                output.get(counter).setObjWidth(tileWidth);
-                output.get(counter).setObjHeight(tileHeight);
-
-
-                counter++;
-
-            }
-        }
-
-        System.out.println("GAMEMAP : COAL: "+(a.getUp_Image()!=null)+" : "+(output.get(0).getUp_Image()!=null));
-
-
-        return output;
-    }
-
     protected void updateBoardSize(){
         int x = 0;
         int y = 0;
