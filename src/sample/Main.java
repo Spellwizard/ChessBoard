@@ -36,7 +36,7 @@ public class Main {
         private ArrayList<BackgroundImage> backgroundImageList = new ArrayList<>();
 
         //The Peice ArrayList eg: where the pawns, queens, knight objects are
-        private ArrayList<Peice> peices_A = new ArrayList<>();
+        private ArrayList<Piece> peices_A = new ArrayList<>();
 
         //The GameMap Object is used and called a lot -
         //This object tracks the user's View, the grid, the tile sizes and counts
@@ -44,7 +44,7 @@ public class Main {
         private Map gameMap;
 
         //The pc selected
-        private Peice selected_Peice;
+        private Piece selected_Peice;
 
         /**
          * The mouse listener is used to activate various actions when the user should use the mouse
@@ -56,12 +56,12 @@ public class Main {
                 //LEFT CLICK
                 if(e.getButton() == 1) {
 
-                    Peice removed = null;
+                    Piece removed = null;
 
                     SolidObject targetSquare;
 
                     //Determine if the click is on a peice
-                    for (Peice item : peices_A) {
+                    for (Piece item : peices_A) {
 
                         //Make a test object to simulate the actual dimensions on the window of
                         //where we are looking for mouse collision
@@ -223,7 +223,7 @@ private void overrideGameValues(String fileName) {
         private void firstTimeinitialization() {
 
             //Initalize the ChessBoard
-            peices_A = Peice.newCheckerBoard(gameMap);
+            peices_A = Piece.newCheckerBoard(gameMap);
 
             overrideGameValues("GameSettings.txt");
 
@@ -267,16 +267,17 @@ private void overrideGameValues(String fileName) {
             //Draw the Background Image
             gameMap.drawBackgroundImages(gg, backgroundImageList);
 
-            //Draw the Board Peices
-            Peice.drawArray(peices_A,gg,gameMap);
-
             //Special Draw the Highlighted player again
             if(selected_Peice!=null) {
                 selected_Peice.resetColor();
-
                 selected_Peice.highlighted_drawobj(gg,gameMap,selected_Peice.getObjColour());
 
             }
+
+            //Draw the Board Peices
+            Piece.drawArray(peices_A,gg,gameMap);
+
+
 
             }
 

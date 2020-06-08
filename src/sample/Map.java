@@ -353,6 +353,38 @@ public class Map {
 
     }
 
+    /**
+     * Given a solidobject convert the X Y of that describe the row / column
+     * @param sam a solidobject that describes it's x, y as rows/ columns not as actual x,y
+     *            also convert the width + height
+     * @return a converted solid object with the X / Y that sam described rows and columns to the maps column, rows
+     */
+    protected SolidObject convertSolidObjectRowCol_to_XY_Tiles(SolidObject sam){
+        SolidObject result = sam;
+
+        //Convert the Row to X
+        result.setPosX(
+                result.getPosX() * this.getTileWidth()
+        );
+
+        //Column to Y
+        result.setPosY(
+                result.getPosY() * this.getTileHeight()
+        );
+
+        //Now the width's + Length
+        result.setObjWidth(
+                result.getObjWidth() * this.getTileWidth()
+        );
+
+        result.setObjHeight(
+                result.getObjHeight() * this.getTileHeight()
+        );
+
+
+        return result;
+    }
+
 
     protected void setTileHeight(int tileHeight) {
         this.tileHeight = tileHeight;

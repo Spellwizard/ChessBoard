@@ -10,16 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3520bff-ab8e-463b-8e2c-5f15b5f66939" name="Default Changelist" comment="Updating Master">
-      <change afterPath="$PROJECT_DIR$/Pawn_Black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pawn_White.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Peice.java" afterDir="false" />
+    <list default="true" id="f3520bff-ab8e-463b-8e2c-5f15b5f66939" name="Default Changelist" comment="Minimal Viable Product Produced for Checkers, Stage 2 completed.">
+      <change afterPath="$PROJECT_DIR$/src/sample/LEGALMOVE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/Peice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/TrainCanvas$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/TrainCanvas$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/TrainCanvas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MovingObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SolidObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SolidObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Peice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Piece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +94,28 @@
       <option name="project" value="LOCAL" />
       <updated>1591585535893</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Minimal Viable Product Produced for Checkers, Stage 2 completed.">
+      <created>1591639321938</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591639321938</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Minimal Viable Product Produced for Checkers, Stage 2 completed.">
+      <created>1591639376590</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591639376590</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Minimal Viable Product Produced for Checkers, Stage 2 completed.">
+      <created>1591639456412</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591639456412</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,13 +133,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updating Master" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating Master" />
+    <MESSAGE value="Minimal Viable Product Produced for Checkers, Stage 2 completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minimal Viable Product Produced for Checkers, Stage 2 completed." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1591637353638">
+    <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1591726486854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1591637353638" />
+    <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1591726486854" />
     <state x="739" y="273" key="FileChooserDialogImpl" timestamp="1591633501856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -123,22 +149,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="837" y="416" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591585454915" />
-    <state width="717" height="910" key="GridCell.Tab.0.bottom" timestamp="1591639042763">
+    <state width="603" height="910" key="GridCell.Tab.0.bottom" timestamp="1591731365245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="717" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
-    <state width="717" height="910" key="GridCell.Tab.0.center" timestamp="1591639042763">
+    <state width="603" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
+    <state width="603" height="910" key="GridCell.Tab.0.center" timestamp="1591731365245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="717" height="910" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
-    <state width="717" height="910" key="GridCell.Tab.0.left" timestamp="1591639042763">
+    <state width="603" height="910" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
+    <state width="603" height="910" key="GridCell.Tab.0.left" timestamp="1591731365245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="717" height="910" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
-    <state width="717" height="910" key="GridCell.Tab.0.right" timestamp="1591639042763">
+    <state width="603" height="910" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
+    <state width="603" height="910" key="GridCell.Tab.0.right" timestamp="1591731365245">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="717" height="910" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
+    <state width="603" height="910" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
     <state x="551" y="251" key="Vcs.Push.Dialog.v2" timestamp="1591585551572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -147,9 +173,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591628388820" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591629203246">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591725588004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591629203246" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591725588004" />
   </component>
 </project>
