@@ -18,7 +18,7 @@ public class SolidObject {
     private int posX;
     private int posY;
 
-    private Color objColour = Color.BLACK; // the object colour
+    private Color objColour = Color.BLACK; // the object colour instatiated incase someone is an idiot..
 
     //This object's image as it moves in different directions
     private BufferedImage R_Image = null;
@@ -34,7 +34,7 @@ public class SolidObject {
      * @param objHeight  - the interger height in pixels of the object
      * @param objColour the color of the object in the class 'Color'
      */
-    public SolidObject(int posX, int posY, int objWidth, int objHeight, Color objColour) {
+    protected SolidObject(int posX, int posY, int objWidth, int objHeight, Color objColour) {
         this.objWidth = objWidth;
         this.objHeight = objHeight;
         this.posX = posX;
@@ -54,7 +54,7 @@ public class SolidObject {
      * @param up_Image - the image to draw when the object is moving / facing up
      * @param down_Image - the image to draw when the object is moving / facing down
      */
-    public SolidObject(int objWidth, int objHeight, int posX, int posY, Color objColour,
+    protected SolidObject(int objWidth, int objHeight, int posX, int posY, Color objColour,
                        BufferedImage r_Image, BufferedImage l_Image, BufferedImage up_Image, BufferedImage down_Image) {
         this.objWidth = objWidth;
         this.objHeight = objHeight;
@@ -75,7 +75,7 @@ public class SolidObject {
      * @param gg - the Graphics 2D that the object is drawn on
      * @param maps - the Map that is used to draw the object relatively to the view X, Y positions
      */
-    public void drawobj(Graphics2D gg, Map maps){
+    protected void drawobj(Graphics2D gg, Map maps){
         gg.setColor(objColour);
 
         gg.fillRect(posX-maps.getViewX(),
@@ -83,13 +83,11 @@ public class SolidObject {
                 objWidth, objHeight);
     }
 
-    //doesn't comensate for actual positions
-
     /**
      *
      *@param gg - the Graphics 2D that the object is drawn on
      */
-    public void unCompensateddrawobj(Graphics2D gg){
+    protected void unCompensateddrawobj(Graphics2D gg){
         gg.setColor(objColour);
 
         gg.fillRect(posX,
@@ -101,7 +99,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return true when 'this' object is entirely above sam
      */
-    public boolean isBelow(SolidObject sam){
+    protected boolean isBelow(SolidObject sam){
         /**
          * this is true when 'this' object is entirely above sam
          */
@@ -116,7 +114,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return true when 'this' object is entirely above sam
      */
-    public boolean isBelow(SolidObject sam, SolidObject john){
+    protected boolean isBelow(SolidObject sam, SolidObject john){
         /**
          * this is true when 'this' object is entirely above sam
          */
@@ -132,7 +130,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return  true when 'this' object is entirely below of sam
      */
-    public boolean isAbove(SolidObject sam){
+    protected boolean isAbove(SolidObject sam){
         if(this.getPosY()+1
                 >
                 sam.getPosY()+sam.getObjHeight()){
@@ -145,7 +143,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return  true when 'this' object is entirely below of sam
      */
-    public boolean isAbove(SolidObject sam, SolidObject john){
+    protected boolean isAbove(SolidObject sam, SolidObject john){
         if(john.getPosY()+1
                 >
                 sam.getPosY()+sam.getObjHeight()){
@@ -158,7 +156,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return  true when 'this' object is entirely right of sam
      */
-    public boolean isRight(SolidObject sam){
+    protected boolean isRight(SolidObject sam){
         if(
 
         (sam.getPosX()+1)>
@@ -174,7 +172,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return  true when 'this' object is entirely right of sam
      */
-    public boolean isRight(SolidObject sam, SolidObject john){
+    protected boolean isRight(SolidObject sam, SolidObject john){
         if(
 
                 (sam.getPosX()+1)>
@@ -190,7 +188,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return  true when 'this' object is entirely left of sam
      */
-    public boolean isLeft(SolidObject sam){
+    protected boolean isLeft(SolidObject sam){
         if(this.getPosX()+1
                 >
                 sam.getPosX()+sam.getObjWidth()){
@@ -204,7 +202,7 @@ public class SolidObject {
      * @param sam the SolidObject to compare to to determine if they are colliding
      * @return  true when 'this' object is entirely left of sam
      */
-    public boolean isLeft(SolidObject sam, SolidObject john){
+    protected boolean isLeft(SolidObject sam, SolidObject john){
         if(john.getPosX()+1
                 >
                 sam.getPosX()+sam.getObjWidth()){
@@ -221,7 +219,7 @@ public class SolidObject {
      * @param sam compare sam and 'this' for collisions
      * @return true if the objects are colliding
      */
-    public boolean isCollision(SolidObject sam){
+    protected boolean isCollision(SolidObject sam){
 
         if(isAbove(sam)||isBelow(sam)){
             return false;
@@ -245,7 +243,7 @@ public class SolidObject {
      *
      * @return true if the objects are colliding
      */
-    public boolean isCollision(int x, int y , int w, int h){
+    protected boolean isCollision(int x, int y , int w, int h){
 
         SolidObject sam = new SolidObject(x,y,w,h,Color.white);
 
@@ -260,7 +258,7 @@ public class SolidObject {
 
     }
 
-    public boolean isCollision(SolidObject sam, Map gameMap){
+    protected boolean isCollision(SolidObject sam, Map gameMap){
         return isCollision(
                 sam.getPosX(),sam.getPosY(), sam.getObjWidth()*gameMap.getTileWidth(), sam.getObjHeight()*gameMap.getTileHeight(),
 
@@ -291,7 +289,7 @@ public class SolidObject {
      * @param JohnH
      * @return
      */
-    public boolean isCollision(int SamX, int SamY , int SamW, int SamH,
+    protected boolean isCollision(int SamX, int SamY , int SamW, int SamH,
                                int JohnX, int JohnY, int JohnW, int JohnH
                                ){
 
@@ -311,87 +309,87 @@ public class SolidObject {
     }
 
 
-    public int getPosX() {
+    protected int getPosX() {
         return posX;
     }
 
-    public void setPosX(int posX) {
+    protected void setPosX(int posX) {
         this.posX = posX;
     }
 
-    public int getPosY() {
+    protected int getPosY() {
         return posY;
     }
 
-    public void setPosY(int posY) {
+    protected void setPosY(int posY) {
         this.posY = posY;
     }
 
 
-    public Color getObjColour() {
+    protected Color getObjColour() {
         return objColour;
     }
 
-    public void setObjColour(Color objColour) {
+    protected void setObjColour(Color objColour) {
         this.objColour = objColour;
     }
 
 
-    public int getObjWidth() {
+    protected int getObjWidth() {
         return objWidth;
     }
 
-    public void setObjWidth(int objWidth) {
+    protected void setObjWidth(int objWidth) {
         this.objWidth = objWidth;
     }
 
-    public int getObjHeight() {
+    protected int getObjHeight() {
         return objHeight;
     }
 
-    public void setObjHeight(int objHeight) {
+    protected void setObjHeight(int objHeight) {
         this.objHeight = objHeight;
     }
 
 
 
-    public BufferedImage getR_Image() {
+    protected BufferedImage getR_Image() {
         return R_Image;
     }
 
-    public BufferedImage getL_Image() {
+    protected BufferedImage getL_Image() {
         return L_Image;
     }
 
-    public BufferedImage getUp_Image() {
+    protected BufferedImage getUp_Image() {
         return Up_Image;
     }
 
-    public BufferedImage getDown_Image() {
+    protected BufferedImage getDown_Image() {
         return Down_Image;
     }
 
 
-    public void setR_Image(BufferedImage r_Image) {
+    protected void setR_Image(BufferedImage r_Image) {
         R_Image = r_Image;
     }
 
-    public void setL_Image(BufferedImage l_Image) {
+    protected void setL_Image(BufferedImage l_Image) {
         L_Image = l_Image;
     }
 
-    public void setUp_Image(BufferedImage up_Image) {
+    protected void setUp_Image(BufferedImage up_Image) {
         Up_Image = up_Image;
     }
 
-    public void setDown_Image(BufferedImage down_Image) {
+    protected void setDown_Image(BufferedImage down_Image) {
         Down_Image = down_Image;
     }
 
     /**
      * @param filePath Given a file path save the image to the respective directional movment
      */
-    public void setRightImage(String filePath) {
+    protected void setRightImage(String filePath) {
         {
             try {
 
@@ -405,7 +403,7 @@ public class SolidObject {
     /**
      * @param filePath Given a file path save the image to the respective directional movment
      */
-    public void setLeftImage(String filePath) {
+    protected void setLeftImage(String filePath) {
         {
             try {
 
@@ -418,7 +416,7 @@ public class SolidObject {
     /**
      * @param filePath Given a file path save the image to the respective directional movment
      */
-    public void setUpImage(String filePath) {
+    protected void setUpImage(String filePath) {
         try {
 
             Up_Image = ImageIO.read(new File(filePath));
@@ -430,7 +428,7 @@ public class SolidObject {
     /**
      * @param filePath Given a file path save the image to the respective directional movment
      */
-    public void setDownImage(String filePath) {
+    protected void setDownImage(String filePath) {
 
         try {
 
@@ -438,11 +436,6 @@ public class SolidObject {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-    }
-
-
-    public void updateSize(){
 
     }
 

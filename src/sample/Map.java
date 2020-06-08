@@ -1,5 +1,6 @@
 package sample;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -16,7 +17,6 @@ public class Map {
 
     private int viewWidth;//the width of the viewing area, typically going to be the size of the graphical window
     private int viewHeight;//the width of the viewing area, typically going to be the size of the graphical window
-
 
     private int MapWidth;
     private int MapHeight;
@@ -106,6 +106,79 @@ public class Map {
 
         }
 
+    /**
+     * Convert the window to a width and length and give it to the function FitBoardToView() to do the heavy work
+     * @param window - the window to be fit to
+     * Also note the View Width / Height are also updated to match the window's size
+     */
+    protected void FitBoardToJFrame(GameCanvas window){
+
+        //update View Width / Height
+        this.setViewHeight(  window.getHeight()  );
+
+        this.setViewWidth(   window.getWidth()   );
+
+        //Now call the FitBoardToView() to do the heavy lifting
+        FitBoardToView(
+                this.getViewWidth(),
+                this.getViewHeight()
+                         );
+
+        }
+
+    /**
+     * This is a very dangerous function to call unless
+     * every object described as a size of the tiles is
+     * updated accordingly or called with the tile size every time on draw
+     */
+    protected void FitBoardToView(int Width, int Height){
+
+        //Divide the Width by the number of tiles and use that number as the new tileWidth
+        int _Tile_Width = Width / tileList.size();
+
+        int _Tile_Height = Height / tileList.get(0).size();
+
+        //Update the width / height
+
+        this.setTileHeight(_Tile_Height);
+
+        this.setTileWidth(_Tile_Width);
+
+        //Now update the X, Y's of the tiles as needed
+
+        int x = 0;
+        int y = 0;
+
+        for(ArrayList<SolidObject> rows: tileList){
+
+            for(SolidObject column_: rows){
+
+                //Update the X, Y with the looped position
+                column_.setPosX(
+                        x
+                                );
+
+                column_.setPosY(
+                        y
+                                );
+
+                column_.setObjWidth(_Tile_Width);
+                column_.setObjHeight(_Tile_Height);
+
+                //Then at the next position update the Y position
+
+                y+=_Tile_Height;
+            }
+
+            //Then at the end of the row update the X
+            //Gotta reset the column, the iterate to the next row
+            y= 0;
+            x+=_Tile_Width;
+
+        }
+
+        }
+
 
     /**
      * Given an arraylist of BackgroundImage draw the images in accordance
@@ -181,18 +254,18 @@ public class Map {
      * @param  targetx - x coordinate (assumes positive)
      * @param targety - y coordinate (assumes positive)
      */
-    public SolidObject CollidedTile(int targetx, int targety, Map gameMap) {
+    protected static SolidObject CollidedTile(int targetx, int targety, Map gameMap) {
         SolidObject output = null;
 
-        for(int i = 0; i< tileList.size(); i ++){
+        for(int i = 0; i< gameMap.getTileList().size(); i ++){
 
-            for(int j = 0 ; j < tileList.get(i).size();j++){
+            for(int j = 0 ; j < gameMap.getTileList().get(i).size();j++){
 
                 if(
-                        tileList.get(i).get(j).
+                        gameMap.getTileList().get(i).get(j).
                                 isCollision(targetx,targety,1,1)){
 
-                    output =  tileList.get(i).get(j);
+                    output =  gameMap.getTileList().get(i).get(j);
                 }
             }
 
@@ -201,39 +274,6 @@ public class Map {
 
         return output;
     }
-
-    /**
-     * Draw the vision that should be the only area on the screen
-     * @param gg - graphics to draw stuff
-     */
-    public void drawVisionSight(Graphics2D gg){
-
-        gg.setColor(Color.orange);
-
-        gg.fillRect(
-                viewX+100
-                ,
-                viewY+100,
-
-                (viewWidth-10), (viewHeight-10)
-
-        );
-
-    }
-
-    public void updatePosition(SolidObject centerObject){
-
-        viewX = centerObject.getPosX()-(viewWidth/2);
-        viewY = (centerObject.getPosY()-(viewHeight/2));
-
-        if(viewX+viewWidth>MapWidth)viewX = MapWidth- viewWidth;
-        if(viewY + viewHeight> MapHeight) viewY = MapHeight - viewHeight;
-
-        if(viewX<0)viewX = 1;//stop the X value of the view from exceeding the overall position of the map
-        if(viewY<0)viewY=1;
-
-    }
-
 
     /**
      * @return true if the Building and the object collide tiles

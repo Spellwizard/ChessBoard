@@ -43,8 +43,6 @@ public class MovingObject extends SolidObject{
                         int defaultHSpeed, int defaultVSpeed) {
         super(posX, posY, objWidth, objHeight, Color.BLACK);
 
-
-
         this.defaultHSpeed = defaultHSpeed;
         this.defaultVSpeed = defaultVSpeed;
 

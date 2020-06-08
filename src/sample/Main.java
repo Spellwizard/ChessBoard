@@ -20,7 +20,6 @@ public class Main {
 
         frame.setBackground(Color.yellow);
 
-
         frame.setLocationRelativeTo(null);
 
         GameCanvas program = new GameCanvas();
@@ -34,24 +33,103 @@ public class Main {
 }
     class GameCanvas extends JComponent {
 
-        private ArrayList<BackgroundImage> backgroundImageList = new ArrayList<BackgroundImage>();
+        private ArrayList<BackgroundImage> backgroundImageList = new ArrayList<>();
 
-        //IMAGES FILE PATHS
+        //The Peice ArrayList eg: where the pawns, queens, knight objects are
+        private ArrayList<Peice> peices_A = new ArrayList<>();
 
-        //THE ACTUAL IMAGE OBJECT
-
+        //The GameMap Object is used and called a lot -
+        //This object tracks the user's View, the grid, the tile sizes and counts
+        //and depending on alterations underlying areas as well
         private Map gameMap;
 
-        //private devTools developerTool = new devTools();
+        //The pc selected
+        private Peice selected_Peice;
 
         /**
-         * The mouse listener is used to activate various actions when the player / user should use the mouse
+         * The mouse listener is used to activate various actions when the user should use the mouse
          */
         MouseListener ratListener = new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
 
-                repaint();
+                //LEFT CLICK
+                if(e.getButton() == 1) {
+
+                    Peice removed = null;
+
+                    SolidObject targetSquare;
+
+                    //Determine if the click is on a peice
+                    for (Peice item : peices_A) {
+
+                        //Make a test object to simulate the actual dimensions on the window of
+                        //where we are looking for mouse collision
+                        targetSquare = new SolidObject(
+                                item.getPosX() * gameMap.getTileWidth(),
+                                item.getPosY() * gameMap.getTileHeight(),
+                                item.getObjWidth(),
+                                item.getObjHeight(),
+                                null
+                        );
+
+                        //Use my fancy collision function to test for a simulation collision/ overlap
+                        if (targetSquare.isCollision
+                                (e.getX(), e.getY(), 1, 1)) {
+
+                            //set the targeted peice as a new selected object if there isn't a current one
+                            //or that the current selected_Peice and the targeted one share a isWhite value
+                            if(selected_Peice==null ||
+                                    (selected_Peice.isWhite()==item.isWhite())
+                            ) {
+
+                                //a new selected object
+                                selected_Peice = item;
+
+                                selected_Peice.resetColor();
+
+                            }
+                            else{
+                                removed = item;
+                            }
+                        }
+
+
+                    }
+
+                    //Move Selected PC if it's on an empty spot
+                    if(selected_Peice!=null){
+
+                        //only remove the target peice if we
+                        //1. already have a selected object
+                        //2. the target object and the selected aren't the same (self destruction)
+                        //3. the target object and selected aren't the same colour
+                        if(
+                                removed!=null
+                                        &&
+                                        removed!=selected_Peice
+                                        &&
+                                        selected_Peice.isWhite()!=removed.isWhite()
+                        ){
+                            peices_A.remove(removed);
+                        }
+
+                        selected_Peice.testMovement(e,gameMap);
+
+                    }
+                }
+
+                //RIGHT CLICK
+                if(e.getButton() == 3){
+
+                    //Clear the selected Pc
+
+                    if(selected_Peice!=null){
+                        selected_Peice.resetColor();
+                    }
+
+                    selected_Peice = null;
+                }
 
             }
 
@@ -87,18 +165,13 @@ public class Main {
             }
         };
 
-        /**
-         * The InputTracker is used to track keyboard actions as both listed under the developer commands and the
-         * various commands of the players in the player lists
-         * ToDo
-         * I would like to see a comination of commands eg: shift + r to reverese the direction of rotation
-         *
-         */
         KeyListener InputTracker = new KeyListener() {
 
             public void keyPressed(KeyEvent e) {
 
             }
+
+
             public void keyTyped(KeyEvent e){
 
 
@@ -129,10 +202,9 @@ public class Main {
                 100,
                 100
 
-
                 ,
-                new Color(255, 255, 255),
-                new Color(0, 0, 0)
+                new Color(97, 77, 46, 255),
+                new Color(25, 71, 28)
         );
 
         firstTimeinitialization();
@@ -150,19 +222,8 @@ private void overrideGameValues(String fileName) {
 
         private void firstTimeinitialization() {
 
-            //use prebuilt values, make players and put them into the frogList arrayList
-
-            String temp = "PlayerCount";
-            FileReader file = new FileReader("GameSettings.txt");
-
-            int value = 0;
-
-            if (!file.findValue(temp).equals("")
-                    && file.convertStringToInt(file.findValue(temp)) != -1)
-                value =
-                        file.  convertStringToInt(file.findValue(temp))
-                ;
-
+            //Initalize the ChessBoard
+            peices_A = Peice.newCheckerBoard(gameMap);
 
             overrideGameValues("GameSettings.txt");
 
@@ -192,15 +253,30 @@ private void overrideGameValues(String fileName) {
 
         public void paintComponent(Graphics g) {
 
+            if( this.getHeight()    !=  gameMap.getViewHeight()
+                    ||
+                    this.getWidth() !=  gameMap.getViewWidth()
+                )
+            gameMap.FitBoardToJFrame(this);
+
             Graphics2D gg = (Graphics2D) g;
 
-            gameMap.setViewHeight(this.getHeight());
-            gameMap.setViewWidth(this.getWidth());
-
+            //Draw the background Grid
             gameMap.drawCheckerboard(gg);
 
+            //Draw the Background Image
             gameMap.drawBackgroundImages(gg, backgroundImageList);
 
+            //Draw the Board Peices
+            Peice.drawArray(peices_A,gg,gameMap);
+
+            //Special Draw the Highlighted player again
+            if(selected_Peice!=null) {
+                selected_Peice.resetColor();
+
+                selected_Peice.highlighted_drawobj(gg,gameMap,selected_Peice.getObjColour());
+
+            }
 
             }
 

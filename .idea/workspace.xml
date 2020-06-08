@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3520bff-ab8e-463b-8e2c-5f15b5f66939" name="Default Changelist" comment="Updating Master">
+      <change afterPath="$PROJECT_DIR$/Pawn_Black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pawn_White.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Peice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MovingObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/SolidObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SolidObject.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1d1GaGbEij6uQUKeyWbkxc5UPVB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2D_GameTemplate" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager">
@@ -22,5 +71,85 @@
         <item itemvalue="Application.Menu" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3520bff-ab8e-463b-8e2c-5f15b5f66939" name="Default Changelist" comment="" />
+      <created>1591585248168</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591585248168</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Updating Master">
+      <created>1591585535893</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591585535893</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Updating Master" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating Master" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1591637353638">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1591637353638" />
+    <state x="739" y="273" key="FileChooserDialogImpl" timestamp="1591633501856">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="273" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591633501856" />
+    <state x="837" y="416" key="Github.ShareDialog" timestamp="1591585454915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="837" y="416" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591585454915" />
+    <state width="717" height="910" key="GridCell.Tab.0.bottom" timestamp="1591639042763">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="717" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
+    <state width="717" height="910" key="GridCell.Tab.0.center" timestamp="1591639042763">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="717" height="910" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
+    <state width="717" height="910" key="GridCell.Tab.0.left" timestamp="1591639042763">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="717" height="910" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
+    <state width="717" height="910" key="GridCell.Tab.0.right" timestamp="1591639042763">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="717" height="910" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591639042763" />
+    <state x="551" y="251" key="Vcs.Push.Dialog.v2" timestamp="1591585551572">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591585551572" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1591628388820">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591628388820" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591629203246">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591629203246" />
   </component>
 </project>

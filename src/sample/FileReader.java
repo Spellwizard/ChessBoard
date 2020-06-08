@@ -396,7 +396,7 @@ public class FileReader {
      * @param num
      * @return
      */
-    public int convertStringToInt(String num){
+    protected static int convertStringToInt(String num){
 
 
         try{
@@ -445,7 +445,7 @@ public class FileReader {
 
             return ImageIO.read(new File(filePathName));
         } catch (IOException e) {
-
+            System.out.println("Can't Find : "+filePathName);
 
             e.printStackTrace();
         }
