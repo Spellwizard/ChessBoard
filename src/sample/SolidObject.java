@@ -83,6 +83,14 @@ public class SolidObject {
                 objWidth, objHeight);
     }
 
+    protected void printXY(){
+        System.out.println("SolidObject ("+this.getPosX()+", "+this.getPosY()+")");
+    }
+
+    protected void printXY(String name){
+        System.out.println(name+"("+this.getPosX()+", "+this.getPosY()+")");
+    }
+
     /**
      *
      *@param gg - the Graphics 2D that the object is drawn on

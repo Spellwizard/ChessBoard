@@ -10,20 +10,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3520bff-ab8e-463b-8e2c-5f15b5f66939" name="Default Changelist" comment="Minimal Viable Product Produced for Checkers, Stage 2 completed.">
-      <change afterPath="$PROJECT_DIR$/src/sample/LEGALMOVE.java" afterDir="false" />
+    <list default="true" id="f3520bff-ab8e-463b-8e2c-5f15b5f66939" name="Default Changelist" comment="Fine Tuning needed but general gist done -&#10;TODO fix LEGALMOVE.moveTowardsEnemyLine&#10;TODO prevent illegal moves&#10;TODO graphically show move attempted was wrong&#10;TODO QOL feature to restart&#10;TODO QOL feature to swap checkers / chess&#10;TODO QOL turn based play - only one color can move at a time (back and forth)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/META-INF/Chess.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/GameCanvas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/Peice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/TrainCanvas$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/TrainCanvas$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/TrainCanvas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/LEGALMOVE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/LEGALMOVE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/Piece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/SolidObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/SolidObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Chess/sample/devTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Chess/sample/devTools.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/LEGALMOVE.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/LEGALMOVE.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Peice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/SolidObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SolidObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/devTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/devTools.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2D_GameTemplate" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/PlaneShootergGame" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager">
@@ -115,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591639456412</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fine Tuning needed but general gist done -&#10;TODO fix LEGALMOVE.moveTowardsEnemyLine&#10;TODO prevent illegal moves&#10;TODO graphically show move attempted was wrong&#10;TODO QOL feature to restart&#10;TODO QOL feature to swap checkers / chess&#10;TODO QOL turn based play - only one color can move at a time (back and forth)">
+      <created>1591733507420</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591733507421</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,37 +147,38 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updating Master" />
     <MESSAGE value="Minimal Viable Product Produced for Checkers, Stage 2 completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minimal Viable Product Produced for Checkers, Stage 2 completed." />
+    <MESSAGE value="Fine Tuning needed but general gist done -&#10;TODO fix LEGALMOVE.moveTowardsEnemyLine&#10;TODO prevent illegal moves&#10;TODO graphically show move attempted was wrong&#10;TODO QOL feature to restart&#10;TODO QOL feature to swap checkers / chess&#10;TODO QOL turn based play - only one color can move at a time (back and forth)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fine Tuning needed but general gist done -&#10;TODO fix LEGALMOVE.moveTowardsEnemyLine&#10;TODO prevent illegal moves&#10;TODO graphically show move attempted was wrong&#10;TODO QOL feature to restart&#10;TODO QOL feature to swap checkers / chess&#10;TODO QOL turn based play - only one color can move at a time (back and forth)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser" timestamp="1591726486854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="764" y="234" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1591726486854" />
-    <state x="739" y="273" key="FileChooserDialogImpl" timestamp="1591633501856">
+    <state x="739" y="273" key="FileChooserDialogImpl" timestamp="1592244742903">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="739" y="273" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591633501856" />
-    <state x="837" y="416" key="Github.ShareDialog" timestamp="1591585454915">
+    <state x="739" y="273" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592244742903" />
+    <state x="837" y="416" key="Github.ShareDialog" timestamp="1591733679163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="837" y="416" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591585454915" />
-    <state width="603" height="910" key="GridCell.Tab.0.bottom" timestamp="1591731365245">
+    <state x="837" y="416" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591733679163" />
+    <state width="603" height="910" key="GridCell.Tab.0.bottom" timestamp="1592849424954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="603" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
-    <state width="603" height="910" key="GridCell.Tab.0.center" timestamp="1591731365245">
+    <state width="603" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592849424954" />
+    <state width="603" height="910" key="GridCell.Tab.0.center" timestamp="1592849424954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="603" height="910" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
-    <state width="603" height="910" key="GridCell.Tab.0.left" timestamp="1591731365245">
+    <state width="603" height="910" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592849424954" />
+    <state width="603" height="910" key="GridCell.Tab.0.left" timestamp="1592849424954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="603" height="910" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
-    <state width="603" height="910" key="GridCell.Tab.0.right" timestamp="1591731365245">
+    <state width="603" height="910" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592849424954" />
+    <state width="603" height="910" key="GridCell.Tab.0.right" timestamp="1592849424954">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="603" height="910" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591731365245" />
+    <state width="603" height="910" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592849424954" />
     <state x="551" y="251" key="Vcs.Push.Dialog.v2" timestamp="1591585551572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

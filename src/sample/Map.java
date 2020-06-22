@@ -360,9 +360,43 @@ public class Map {
      * @return a converted solid object with the X / Y that sam described rows and columns to the maps column, rows
      */
     protected SolidObject convertSolidObjectRowCol_to_XY_Tiles(SolidObject sam){
-        SolidObject result = sam;
+
+        SolidObject result = new SolidObject(0,0,0,0,sam.getObjColour());
 
         //Convert the Row to X
+        result.setPosX(
+                sam.getPosX() * this.getTileWidth()
+        );
+
+        //Column to Y
+        result.setPosY(
+                sam.getPosY() * this.getTileHeight()
+        );
+
+        //Now the width's + Length
+        result.setObjWidth(
+                sam.getObjWidth() * this.getTileWidth()
+        );
+
+        result.setObjHeight(
+                sam.getObjHeight() * this.getTileHeight()
+        );
+
+
+        return result;
+    }
+
+    /**
+     * hastily moved from the map class to the piece class and didn't feel like redoing what i just did...
+     * Given a solidobject convert the X Y of that describe the row / column
+     *   a m that describes it's x, y as rows/ columns not as actual x,y
+     *            also convert the width + height
+     * @return a converted solid object with the X / Y that sam described rows and columns to the maps column, rows
+     */
+    protected SolidObject convertRowCol_X(SolidObject result) {
+
+        //Convert the Row to X
+
         result.setPosX(
                 result.getPosX() * this.getTileWidth()
         );
@@ -374,16 +408,18 @@ public class Map {
 
         //Now the width's + Length
         result.setObjWidth(
-                result.getObjWidth() * this.getTileWidth()
+                this.getTileWidth()
         );
 
         result.setObjHeight(
-                result.getObjHeight() * this.getTileHeight()
+                this.getTileHeight()
         );
 
 
         return result;
     }
+
+
 
 
     protected void setTileHeight(int tileHeight) {

@@ -1,17 +1,27 @@
 package sample;
 
+import java.awt.*;
+
 public class devTools {
 
-    //User Input keyboard button values
-    private int Keycmd_PauseGame=80; //pause / unpause the round
-    private int Keycmd_StepRound=75; //allow for 1 run of the game and then pause before next round
-    private int Keycmd_IncreaseSpeed=74;//increase round speed
-    private int Keycmd_DecreaseSpeed=76;//decrease round speed
-    private int Keycmd_ToggleGraphics= 0;//used to toggle if the graphics are on
-    private int Keycmd_repopulateFood = 0;//resets food
+    protected static void drawScorebaord(
+            Graphics2D gg, Piece john) {
+        //  SCOREBOARD
 
+        gg.setColor(Color.white);
 
-    public devTools() {
+        int posx = 60;
+
+        int posy = 35;
+
+        gg.setFont(new Font("TimesRoman", Font.PLAIN, 12));
+
+        gg.drawString(
+
+                "Coords: ("+john.getPosX() + ", " + john.getPosY()+")\t"+
+                        "Width: "+john.getObjWidth()+" Height: " + (john.getObjHeight())
+                , 50, (50+posy));
+
     }
 
 }

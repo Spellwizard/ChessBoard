@@ -435,65 +435,105 @@ public class Piece extends MovingObject {
      */
     protected void testMovement(MouseEvent e, Map maps){
 
-        System.out.println("** New Move");
+        if(e!=null && maps!=null) {
 
-        boolean legalMove = true; //inoccent before guilty yada yada
+            System.out.println("\n\n** New Move");
 
-        SolidObject obj = Map.CollidedTile(e.getX(),e.getY(),maps);
+            boolean legalMove = true; //inoccent before guilty yada yada
 
-        //HorizontalMovment
-        if(this.getObjHSpeed() != 0 && legalMove){
+            //build a solidobject with the x,y width and height of the tile the mouse selected
+            SolidObject obj = Map.CollidedTile(e.getX(), e.getY(), maps);
 
-            legalMove =
-                    LEGALMOVE.Lateral_HorizontalMovement_Ranged(obj, this, maps, this.getObjHSpeed());
+            //double check we aren't moving on ourselves
+            //basically double clicking the same object
 
-            System.out.println("LEGALMOVE.Lateral_HorizontalMovement_Ranged: "+legalMove);
+            if (this.getPosX() == obj.getPosX() && this.getPosY() == obj.getPosY()) {
+                legalMove = false;
+            }
+
+            /**
+             * @param objWidth the width of the object
+             * @param objHeight the height of the object
+             * @param posX the top left corner of the object's x value
+             * @param posY the top left corner y value
+             * @param objColour
+             * @param Image
+             * @param objHSpeed and sets defaultHSpeed as sets the current H speed and stores the original H speed as default for calling later
+             * @param objVSpeed and sets defaultVSpeed sets the current V speed and stores the oringinal V speed as defualt for caling later
+             * @param health
+             * @param isWhite tracks if the player is white or black
+             * @param diagonal_move_range
+             * @param isKnight
+             * @param onlyTowardsEnemy
+             */
+
+            Piece current_location = new Piece(
+               this.getObjWidth(), this.getObjHeight(),this.getPosX(), this.getPosY(), this.getObjColour()
+               ,this.getUp_Image(), this.getObjHSpeed(), this.getObjVSpeed(), 1, this.isWhite(),
+                    this.diagonal_move_range, this.isKnight, this.onlyTowardsEnemy
+            );
+
+            //Now we run through some tests via LEGALMOVE
+            //to ensure we are correctly moving along
+
+
+            //HorizontalMovment
+            if (current_location.getObjHSpeed() != 0 && legalMove) {
+
+                legalMove =
+                        LEGALMOVE.Lateral_HorizontalMovement_Ranged(obj, current_location, maps, current_location.getObjHSpeed());
+
+                System.out.println("LEGALMOVE.Lateral_HorizontalMovement_Ranged: " + legalMove);
+            }
+
+            //VERTICAL
+            if (current_location.getObjVSpeed() != 0 && legalMove) {
+
+                legalMove =
+                        LEGALMOVE.Lateral_VerticalMovement_Ranged(obj, current_location, maps, current_location.getObjVSpeed());
+
+                System.out.println("LEGALMOVE.Lateral_VerticalMovement_Ranged: " + legalMove);
+            }
+
+            //HORSEY!!! :) <-correct
+            if (current_location.isKnight() && legalMove) {
+
+                legalMove =
+                        LEGALMOVE.HorseyPrance_Knight(obj, current_location, maps);
+
+                System.out.println("LEGALMOVE.HorseyPrance_Knight: " + legalMove);
+
+            }
+
+            //DIAGONAL
+            if (current_location.getDiagonal_move_range() != 0 && legalMove) {
+
+                legalMove =
+                        LEGALMOVE.Diagonal_MovementRanged(obj, current_location, maps, current_location.getDiagonal_move_range());
+
+                System.out.println("LEGALMOVE.Diagonal_MovementRanged: " + legalMove);
+            }
+
+            if (current_location.isOnlyTowardsEnemy() && legalMove) {
+
+                legalMove = LEGALMOVE.moveTowardsEnemyLine(obj, current_location, maps);
+
+                System.out.println("LEGALMOVE.moveTowardsEnemyLine: " + legalMove);
+            }
+
+            System.out.println("Move Made was Legal: " + legalMove);
+
+            this.setObjWidth(maps.getTileWidth());
+            this.setObjHeight(maps.getTileHeight());
+
+            if (legalMove) {
+                this.setPosY(obj.getPosY() / maps.getTileHeight());
+                this.setPosX(obj.getPosX() / maps.getTileWidth());
+
+            } else {
+            }
+
         }
-
-        //VERTICAL
-        if(this.getObjVSpeed()!=0 && legalMove){
-
-            legalMove =
-                    LEGALMOVE.Lateral_VerticalMovement_Ranged(obj, this, maps, this.getObjVSpeed());
-
-            System.out.println("LEGALMOVE.Lateral_VerticalMovement_Ranged: "+legalMove);
-        }
-
-        //HORSEY!!! :)
-
-        if(this.isKnight() && legalMove){
-
-            legalMove =
-            LEGALMOVE.HorseyPrance_Knight(obj, this, maps);
-
-            System.out.println("LEGALMOVE.HorseyPrance_Knight: "+legalMove);
-
-        }
-
-        //DIAGONAL
-        if(this.getDiagonal_move_range()!=0 && legalMove){
-
-            legalMove =
-                    LEGALMOVE.Diagonal_MovementRanged(obj, this, maps, this.getDiagonal_move_range());
-
-            System.out.println("LEGALMOVE.Diagonal_MovementRanged: "+legalMove);
-        }
-
-        if(this.isOnlyTowardsEnemy() && legalMove){
-            legalMove = LEGALMOVE.moveTowardsEnemyLine(obj, this, maps);
-
-            System.out.println("LEGALMOVE.moveTowardsEnemyLine: "+legalMove);
-        }
-
-        System.out.println("Move Made was Legal: "+legalMove);
-
-        if(!legalMove)this.setObjColour(new Color(255,0,0));
-
-        this.setPosY(obj.getPosY() / maps.getTileHeight());
-        this.setPosX(obj.getPosX() / maps.getTileWidth());
-
-        this.setObjWidth(maps.getTileWidth());
-        this.setObjHeight(maps.getTileHeight());
 
     }
 
@@ -506,9 +546,11 @@ public class Piece extends MovingObject {
      * @return a converted solid object with the X / Y that sam described rows and columns to the maps column, rows
      */
     protected Piece convertRowCol_XY(Map maps){
+
         Piece result = this;
 
         //Convert the Row to X
+
         result.setPosX(
                 result.getPosX() * maps.getTileWidth()
         );
@@ -520,11 +562,11 @@ public class Piece extends MovingObject {
 
         //Now the width's + Length
         result.setObjWidth(
-                result.getObjWidth() * maps.getTileWidth()
+         maps.getTileWidth()
         );
 
         result.setObjHeight(
-                result.getObjHeight() * maps.getTileHeight()
+               maps.getTileHeight()
         );
 
 

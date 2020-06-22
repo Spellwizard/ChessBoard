@@ -1,6 +1,8 @@
 package sample;
 
 
+import java.awt.*;
+
 /**
  * a set of functions to compare a piece to a desired move and return the various legality
  *
@@ -65,7 +67,8 @@ public class LEGALMOVE {
     /**
      *
      * @param newMoveTile object describing the new tile the piece is being asked towards
-     * @param piece - the piece that is the object wanting to be moved to the new position
+     * @param piece - the piece that is the object wanting to be moved to the new position; Note the X/Y must be actual on the screen
+     *              basically ensure the object position isn't described via col/rows
      * @param map - The Map that the pieces are currently all on and describes the entire size of the game board
      * @return true
      */
@@ -75,49 +78,81 @@ public class LEGALMOVE {
         //basic safety check to ensure all objects provided are safe to use
         if(newMoveTile==null|| piece==null || map == null) return false;
 
-        Piece currentPosPiece = piece.convertRowCol_XY(map);
+        piece.printXY("PC");
+
+        //Create a converted Piece with an X,Y representing the col/row
+        SolidObject currentPosPiece = map.convertSolidObjectRowCol_to_XY_Tiles(piece);
 
         //ROWS
+        //Row Range = the absolute value distance from the new position - the current position
         int row_actualRange = Math.abs( newMoveTile.getPosX()) - Math.abs(currentPosPiece.getPosX() );
+
         int rowdistance = Math.abs(row_actualRange / map.getTileWidth());
 
 
         //COL
         int actualRange = newMoveTile.getPosY() - currentPosPiece.getPosY();
+
         int coldistance = Math.abs(actualRange / map.getTileHeight());
 
+        //Once we have converted the movement to a number of columns+- and rows+-
+        //All we have to do to ensure it is a diagonal movement is make sure that the column movement matches the row movement
+        //and then the other thing is to dbl check the range and ensure we aren't exceeding
+        //Now the b/c col = row we only have to check one is within the range and then both are
 
-        if(rowdistance == coldistance&&
-                (rowdistance+coldistance)/2 <=range
+
+        if(rowdistance == coldistance
+                &&
+                (rowdistance <=range
+                )
         ){
 
             return true;
         }
 
         return false;
+
+
     }
 
 
     /**
      *
-     * @param newMoveTile object describing the new tile the piece is being asked towards
-     * @param piece - the piece that is the object wanting to be moved to the new position
+     *
+     *
+     *
+     * @param selected_piece  piece - the piece that is the object wanting to be moved to the new position
+     * @param target_Move  object describing the new tile the piece is being asked towards
      * @param map - The Map that the pieces are currently all on and describes the entire size of the game board
      * @return true if the movement taken is 'up' relative to colour eg: Black is down, White is up
      */
     protected static boolean moveTowardsEnemyLine(
-            SolidObject newMoveTile, Piece piece, Map map){
+            SolidObject target_Move, Piece selected_piece, Map map){
 
         //basic safety check to ensure all objects provided are safe to use
-        if(newMoveTile==null|| piece==null || map == null) return false;
+        if(target_Move==null|| selected_piece==null || map == null) return false;
 
-        Piece actualPiece = piece.convertRowCol_XY(map);
+
+        Piece piece = selected_piece;
+        piece.setPosX(selected_piece.getPosX() / map.getTileWidth());
+        piece.setPosY(selected_piece.getPosY() / map.getTileHeight());
+
+
+
+        SolidObject newMoveTile = new SolidObject(1,1,
+                target_Move.getObjWidth(),target_Move.getObjHeight(), target_Move.getObjColour());
+
+        newMoveTile.setPosX(target_Move.getPosX() / map.getTileWidth());
+        newMoveTile.setPosY(target_Move.getPosY() / map.getTileHeight());
 
         //WHITE
 
+        System.out.println("Pc: "+piece.getPosY()+" : "+ newMoveTile.getPosY());
+
         if(piece.isWhite()){
 
-            if(actualPiece.getPosY() > newMoveTile.getPosY()
+            if(
+                    piece.getPosY() > newMoveTile.getPosY()
             ){
 
                 return true;
@@ -129,7 +164,8 @@ public class LEGALMOVE {
         //BLACK
         else{
 
-            if(actualPiece.getPosY() < newMoveTile.getPosY()){
+            if(
+                    piece.getPosY() < newMoveTile.getPosY()){
 
                 return true;
 

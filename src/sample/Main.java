@@ -1,8 +1,10 @@
 package sample;
 
 import javax.swing.*;
+
 import java.awt.*;
-import java.awt.event.*;
+
+import java.awt.event.*; //The class called to manage input that is then converted to output via awt
 
 import java.util.ArrayList;
 
@@ -53,6 +55,23 @@ public class Main {
             @Override
             public void mouseClicked(MouseEvent e) {
 
+            }
+
+            @Override
+            /**
+             * This function will activate when a mouse button is pressed
+             */
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            /**
+             * Activates whenever a mouse button is released
+             */
+            public void mouseReleased(MouseEvent e) {
+
+
                 //LEFT CLICK
                 if(e.getButton() == 1) {
 
@@ -78,7 +97,8 @@ public class Main {
                                 (e.getX(), e.getY(), 1, 1)) {
 
                             //set the targeted peice as a new selected object if there isn't a current one
-                            //or that the current selected_Peice and the targeted one share a isWhite value
+                            //or that the current selected_Piece and the targeted one share a isWhite value
+
                             if(selected_Peice==null ||
                                     (selected_Peice.isWhite()==item.isWhite())
                             ) {
@@ -131,21 +151,6 @@ public class Main {
                     selected_Peice = null;
                 }
 
-            }
-
-            @Override
-            /**
-             * This function will activate when a mouse button is pressed
-             */
-            public void mousePressed(MouseEvent e) {
-
-            }
-
-            @Override
-            /**
-             * Activates whenever a mouse button is released
-             */
-            public void mouseReleased(MouseEvent e) {
 
             }
 
@@ -253,6 +258,8 @@ private void overrideGameValues(String fileName) {
 
         public void paintComponent(Graphics g) {
 
+
+
             if( this.getHeight()    !=  gameMap.getViewHeight()
                     ||
                     this.getWidth() !=  gameMap.getViewWidth()
@@ -278,6 +285,7 @@ private void overrideGameValues(String fileName) {
             Piece.drawArray(peices_A,gg,gameMap);
 
 
+            if(selected_Peice!=null)devTools.drawScorebaord(gg, selected_Peice);
 
             }
 
