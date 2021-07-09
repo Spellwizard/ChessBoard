@@ -281,6 +281,15 @@ class MenuSub
         //START
         else if(action.equals("SGame")){
 
+
+            Checkers game = new Checkers();
+            game.initBoard();
+            game.populateAlphabet();
+            game.printBoard();
+
+            game.getPlayerMove(false);
+
+
             //Set the GameJFrame to a new ProgramWindow
             //Based on present design at this hand off the Java File 'Main' takes primary control until program is ended
             GameJFrame = makeNewGameWindow();
